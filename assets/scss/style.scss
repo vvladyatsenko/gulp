@@ -2,8 +2,9 @@
 *:after,
 *:before {
   box-sizing: border-box;
-  padding: 0;
   margin: 0;
+  padding: 0;
+
   transition: .5s ease-in-out;
   /* добавим плавность переходов для всех элементов страницы*/
 }
@@ -14,11 +15,13 @@ ul {
 
 a {
   text-decoration: none;
+
   outline: none;
 }
 
 img {
   display: block;
+
   width: 100%;
 }
 
@@ -28,17 +31,19 @@ h3,
 h4,
 h5,
 h6 {
+  letter-spacing: 1px;
+
   font-family: 'Playfair Display';
   font-weight: normal;
-  letter-spacing: 1px;
 }
 
 body {
+  color: #373737;
+  background: #f7f7f7;
+
   font-family: 'Open Sans', arial, sans-serif;
   font-size: 14px;
   line-height: 1;
-  color: #373737;
-  background: #f7f7f7;
 }
 
 /* добавим очистку потока для всех контейнеров, внутри которых задано обтекание дочерних элементов */
@@ -47,26 +52,30 @@ header:after,
 footer:after,
 .widget-posts-list li:after,
 #subscribe:after {
-  content: "";
   display: table;
   clear: both;
+
+  content: "";
 }
 
 /* стилевой класс, который управляет шириной контейнера сетки*/
 .container {
-  margin: 0 auto;
   width: 100%;
   max-width: 960px;
+
+  margin: 0 auto;
   padding: 0 15px;
 }
 
 header {
+  position: relative;
+
   width: 100%;
+  margin-bottom: 30px;
+  padding: 15px 0;
+
   background: white;
   box-shadow: 3px 3px 1px rgba(0, 0, 0, .05);
-  padding: 15px 0;
-  margin-bottom: 30px;
-  position: relative;
 }
 
 /* логотип */
@@ -76,15 +85,19 @@ header {
 }
 
 .logo span {
-  color: white;
   display: inline-block;
+
   width: 30px;
   height: 30px;
-  line-height: 30px;
-  border-radius: 50%;
   margin: 5px 0;
+
   text-align: center;
+
+  color: white;
+  border-radius: 50%;
   text-shadow: 2px 2px 1px rgba(0, 0, 0, .4);
+
+  line-height: 30px;
 }
 
 .logo span:nth-child(odd) {
@@ -102,15 +115,19 @@ header {
 
 #menu li {
   display: inline-block;
+
   margin-right: 30px;
 }
 
 #menu a {
-  color: #111;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  font-weight: 600;
   display: block;
+
+  letter-spacing: 1px;
+  text-transform: uppercase;
+
+  color: #111;
+
+  font-weight: 600;
   line-height: 40px;
 }
 
@@ -124,32 +141,43 @@ header {
 
 /* форма поиска */
 #searchform {
-  float: right;
-  margin-left: 46px;
-  display: inline-block;
   position: relative;
+
+  display: inline-block;
+
+  float: right;
+
+  margin-left: 46px;
 }
 
 #searchform input {
-  width: 170px;
   float: left;
-  border: none;
-  padding-left: 10px;
-  height: 40px;
   overflow: hidden;
-  outline: none;
+
+  width: 170px;
+  height: 40px;
+  padding-left: 10px;
+
   color: #9E9C9C;
+  border: none;
+  outline: none;
+
   font-style: italic;
 }
 
 #searchform button {
-  background: transparent;
-  height: 40px;
-  border: none;
   position: absolute;
   right: 10px;
-  color: #EF5A42;
+
+  height: 40px;
+
   cursor: pointer;
+
+  color: #EF5A42;
+  border: none;
+
+  background: transparent;
+
   font-size: 18px;
 }
 
@@ -159,34 +187,45 @@ header {
 
 /* кнопка переключения меню, появляющаяся при ширине 768px */
 .nav-toggle {
-  display: none;
   position: relative;
+
+  display: none;
   float: right;
+
   width: 40px;
   height: 40px;
   margin-left: 20px;
-  background: #EF5A42;
+
   cursor: pointer;
+
+  background: #EF5A42;
 }
 
 .nav-toggle span {
-  display: block;
   position: absolute;
   top: 19px;
-  left: 8px;
   right: 8px;
+  left: 8px;
+
+  display: block;
+
   height: 2px;
+
   background: white;
 }
 
 .nav-toggle span:before,
 .nav-toggle span:after {
-  content: "";
   position: absolute;
-  display: block;
   left: 0;
+
+  display: block;
+
   width: 100%;
   height: 2px;
+
+  content: "";
+
   background: white;
 }
 
@@ -205,9 +244,11 @@ header {
 
 /* левый контейнер */
 .posts-list {
-  margin-bottom: 30px;
-  width: 64%;
   float: left;
+
+  width: 64%;
+
+  margin-bottom: 30px;
 }
 
 /* блок для статьи */
@@ -216,8 +257,9 @@ header {
 }
 
 .post-content p {
-  line-height: 1.5;
   padding-bottom: 1em;
+
+  line-height: 1.5;
 }
 
 .post-image {
@@ -229,101 +271,131 @@ header {
 }
 
 .category a {
-  color: #F8B763;
   text-transform: uppercase;
+
+  color: #F8B763;
 }
 
 .post-title {
   margin-bottom: 12px;
+
   font-size: 26px;
 }
 
 /* блок с кнопкой "продолжить чтение" и кнопками социальных сетей */
 .post-footer {
+  position: relative;
+
+  margin-top: 15px;
+
   border-top: 1px solid #EBEBE3;
   border-bottom: 1px solid #EBEBE3;
-  position: relative;
-  margin-top: 15px;
 }
 
 .more-link {
   position: relative;
+
   display: inline-block;
-  font-size: 10px;
-  text-transform: uppercase;
-  color: white;
-  line-height: 44px;
+
   padding: 0 22px;
-  background: #3C3D41;
-  letter-spacing: 0.1em;
+
   white-space: nowrap;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+
+  color: white;
+  background: #3C3D41;
+
+  font-size: 10px;
+  line-height: 44px;
 }
 
 .more-link:after {
-  content: '';
-  display: block;
   position: absolute;
-  width: 0;
-  height: 0;
   top: 0;
   right: 0;
+
+  display: block;
+
+  width: 0;
+  height: 0;
+
+  content: '';
+  transform: translateX(100%);
+
   border: solid transparent;
   border-width: 22px 18px;
   border-left-color: #3C3D41;
-  transform: translateX(100%);
 }
 
 .post-social {
   position: absolute;
-  left: auto;
   top: 50%;
   right: 0;
-  text-align: right;
-  transform: translateY(-50%);
+  left: auto;
+
   padding: 0;
+
+  transform: translateY(-50%);
+  text-align: right;
+
   font-size: 12px;
 }
 
 .post-social a {
   display: inline-block;
-  margin-left: 8px;
-  color: #F8B763;
+
   width: 25px;
   height: 25px;
-  line-height: 23px;
+  margin-left: 8px;
+
   text-align: center;
-  border-radius: 50%;
+
+  color: #F8B763;
   border: 1px solid;
+  border-radius: 50%;
+
+  line-height: 23px;
 }
 
 /* правый контейнер */
 aside {
-  width: 33%;
   float: right;
+
+  width: 33%;
 }
 
 /* блок для виджетов */
 .widget {
-  padding: 20px 15px;
-  background: white;
-  font-size: 13px;
   margin-bottom: 30px;
+
+  padding: 20px 15px;
+
+  background: white;
   box-shadow: 3px 3px 1px rgba(0, 0, 0, .05);
+
+  font-size: 13px;
 }
 
 .widget-title {
-  font-size: 18px;
-  padding: 10px;
   margin-bottom: 20px;
+  padding: 10px;
+
   text-align: center;
+
   border: 2px solid #F8B763;
   box-shadow: 3px 3px 0 0 #F8B763;
+
+  font-size: 18px;
 }
 
 .widget-category-list li {
-  border-bottom: 1px solid #EBEBE3;
   padding: 10px 0;
+
   color: #c6c6c6;
+
+  border-bottom: 1px solid #EBEBE3;
+
   font-style: italic;
 }
 
@@ -332,22 +404,29 @@ aside {
 }
 
 .widget-category-list li a {
-  color: #626262;
   margin-right: 6px;
+
+  color: #626262;
+
   font-style: normal;
 }
 
 .widget-category-list li a:before {
-  content: "\f105";
   display: inline-block;
-  font-family: 'FontAwesome';
+
   margin-right: 10px;
+
+  content: "\f105";
+
   color: #c6c6c6;
+
+  font-family: 'FontAwesome';
 }
 
 .widget-posts-list li {
-  border-top: 1px solid #EBEBE3;
   padding: 15px 0;
+
+  border-top: 1px solid #EBEBE3;
 }
 
 .widget-posts-list li:nth-child(1) {
@@ -355,8 +434,9 @@ aside {
 }
 
 .post-image-small {
-  width: 30%;
   float: left;
+
+  width: 30%;
   margin-right: 15px;
 }
 
@@ -367,49 +447,62 @@ aside {
 /* форма подписки */
 #subscribe {
   position: relative;
+
   width: 100%;
   padding: 15px 0;
 }
 
 #subscribe input {
-  width: 100%;
+  position: relative;
+
   display: block;
   float: left;
-  border: 2px solid #EBEBE3;
-  padding: 0 0 0 10px;
+
+  width: 100%;
   height: 40px;
-  position: relative;
-  outline: none;
+  padding: 0 0 0 10px;
+
   color: #9E9C9C;
+  border: 2px solid #EBEBE3;
+  outline: none;
+
   font-style: italic;
 }
 
 #subscribe button {
-  padding: 0 15px;
-  background: transparent;
-  height: 40px;
-  border: none;
   position: absolute;
   right: 0;
-  color: #EF5A42;
+
+  height: 40px;
+
+  padding: 0 15px;
+
   cursor: pointer;
+
+  color: #EF5A42;
+  border: none;
+  background: transparent;
+
   font-size: 18px;
 }
 
 #subscribe input:focus+button {
-  background: #EF5A42;
   color: white;
+
+  background: #EF5A42;
 }
 
 footer {
   padding: 30px 0;
-  background: #3C3D41;
+
   color: white;
+  background: #3C3D41;
 }
 
 .footer-col {
-  width: 33.3333333333%;
   float: left;
+
+  width: 33.3333333333%;
 }
 
 .footer-col a {
@@ -426,6 +519,7 @@ footer {
 
 .social-bar-wrap a {
   padding: 0 7px;
+
   font-size: 18px;
 }
 
@@ -442,32 +536,39 @@ footer {
 
   /* скрываем верхнее меню, отменяем обтекание, позиционируем его, сместив на высоту шапки сайта */
   #menu {
-    max-height: 0;
-    background: white;
-    float: none;
     position: absolute;
-    overflow: hidden;
+    z-index: 3;
     top: 63px;
     right: 0;
     left: 0;
+
+    float: none;
+    overflow: hidden;
+
+    max-height: 0;
     margin: 0;
     padding: 0;
-    z-index: 3;
+
+    background: white;
   }
 
   /* делаем элементы списка блочными, чтобы они располагались друг под другом */
   #menu li {
     display: block;
-    text-align: center;
-    border-bottom: 1px solid #EBEBE3;
+
     margin-right: 0;
+
+    text-align: center;
+
+    border-bottom: 1px solid #EBEBE3;
   }
 
   /* отменяем обтекание левой и правой колонок, устанавливаем им ширину 100%*/
   .posts-list,
   aside {
-    width: 100%;
     float: none;
+
+    width: 100%;
   }
 
   .widget-post-title {
@@ -479,9 +580,11 @@ footer {
 
   /* отменяем обтекание для логотипа и выравниваем по центру*/
   .logo {
-    float: none;
-    margin: 0 auto 15px;
     display: table;
+
+    float: none;
+
+    margin: 0 auto 15px;
   }
 
   .logo span {
@@ -496,22 +599,26 @@ footer {
   /* позиционируем форму поиска по левому краю */
   #searchform {
     float: left;
+
     margin-left: 0;
   }
 
   /* убираем верхнюю и нижнюю границы и выравниваем кнопку по центру */
   .post-footer {
+    text-align: center;
+
     border-top: none;
     border-bottom: none;
-    text-align: center;
   }
 
   /* отменяем позиционирование кнопок соцсетей */
   .post-social {
     position: static;
-    text-align: center;
-    transform: none;
+
     margin-top: 20px;
+
+    transform: none;
+    text-align: center;
   }
 
   .widget-post-title {
@@ -521,13 +628,16 @@ footer {
   /* отменяем обтекание для столбцов подвала страницы */
   .footer-col {
     float: none;
-    margin-bottom: 20px;
+
     width: 100%;
+    margin-bottom: 20px;
+
     text-align: center;
   }
 
   .footer-col:last-child {
-    text-align: center;
     margin-bottom: 0;
+
+    text-align: center;
   }
 }
